@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class Knight {
     private String name = "Lancelot";
     private int age = 29;
-//    private Quest quest;
+    private Quest quest;
 
 
 //    public Knight(String name, int age, Quest quest) {
@@ -30,13 +30,18 @@ public class Knight {
 
     }
 
-//    public void setQuest(Quest quest) {
-//        this.quest = quest;
-//    }
+    public void setQuest(Quest quest) {
+        this.quest = quest;
+    }
+    public Quest getQuest(){
+        Quest quest;
+        quest = this.quest;
+        return quest;
+    }
 
     @Override
     public String toString() {
-        return "Rycerz o imieniu: " + name + " (" + age + " lat)";
+        return "Rycerz o imieniu: " + name + " (" + age + " lat). Zadanie: " + quest ;
     }
 
 
